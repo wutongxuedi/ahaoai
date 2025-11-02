@@ -23,3 +23,8 @@ dist-ssr
 *.sln
 *.sw?
 
+# Image backups
+*.backup.jpg
+*.backup.png
+*.backup.jpeg
+

@@ -16,11 +16,13 @@ export function TimelineDemo() {
             <img
               src="/images/timeline/2025-1.jpg"
               alt="AI Agent"
+              loading="lazy"
               className="rounded-lg w-full object-cover h-48 border border-white/10"
             />
             <img
               src="/images/timeline/2025-2.jpg"
               alt="智能仓储"
+              loading="lazy"
               className="rounded-lg w-full object-cover h-48 border border-white/10"
             />
           </div>
@@ -41,11 +43,13 @@ export function TimelineDemo() {
             <img
               src="/images/timeline/2024-1.jpg"
               alt="供应链数据分析"
+              loading="lazy"
               className="rounded-lg w-full object-cover h-48 border border-white/10"
             />
             <img
               src="/images/timeline/2024-2.jpg"
               alt="策略规划"
+              loading="lazy"
               className="rounded-lg w-full object-cover h-48 border border-white/10"
             />
           </div>
@@ -66,11 +70,13 @@ export function TimelineDemo() {
             <img
               src="/images/timeline/2022-1.jpg"
               alt="数据分析"
+              loading="lazy"
               className="rounded-lg w-full object-cover h-48 border border-white/10"
             />
             <img
               src="/images/timeline/2022-2.jpg"
               alt="数据可视化"
+              loading="lazy"
               className="rounded-lg w-full object-cover h-48 border border-white/10"
             />
           </div>
@@ -91,11 +97,13 @@ export function TimelineDemo() {
             <img
               src="/images/timeline/2021-1.jpg"
               alt="AI语音助手"
+              loading="lazy"
               className="rounded-lg w-full object-cover h-48 border border-white/10"
             />
             <img
               src="/images/timeline/2021-2.jpg"
               alt="智能交互"
+              loading="lazy"
               className="rounded-lg w-full object-cover h-48 border border-white/10"
             />
           </div>
@@ -116,11 +124,13 @@ export function TimelineDemo() {
             <img
               src="/images/timeline/2020-1.jpg"
               alt="短视频制作"
+              loading="lazy"
               className="rounded-lg w-full object-cover h-48 border border-white/10"
             />
             <img
               src="/images/timeline/2020-2.jpg"
               alt="内容运营"
+              loading="lazy"
               className="rounded-lg w-full object-cover h-48 border border-white/10"
             />
           </div>

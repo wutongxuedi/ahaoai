@@ -1,7 +1,30 @@
+import { useState, useEffect } from 'react'
 import { SplineScene } from "@/components/ui/splite";
 import { Spotlight } from "@/components/ui/spotlight-aceternity"
 
 export function SplineSceneBasic() {
+  const [isMobile, setIsMobile] = useState(false)
+  const [showSpline, setShowSpline] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+    
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    
+    // 延迟加载3D场景以提升首屏性能
+    const timer = setTimeout(() => {
+      setShowSpline(true)
+    }, 1000)
+    
+    return () => {
+      window.removeEventListener('resize', checkMobile)
+      clearTimeout(timer)
+    }
+  }, [])
+
   return (
     <div 
       className="w-full h-[600px] md:h-[700px] bg-black relative overflow-hidden"
@@ -28,13 +51,15 @@ export function SplineSceneBasic() {
           </div>
         </div>
 
-        {/* 右侧内容 */}
-        <div className="flex-1 relative">
-          <SplineScene 
-            scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
-            className="w-full h-full"
-          />
-        </div>
+        {/* 右侧内容 - 仅在桌面端且延迟后显示 */}
+        {!isMobile && showSpline && (
+          <div className="flex-1 relative">
+            <SplineScene 
+              scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+              className="w-full h-full"
+            />
+          </div>
+        )}
       </div>
     </div>
   )
