@@ -195,3 +195,5 @@ The Timeline should appear at the bottom of your homepage, below the technology 
 **Questions or Issues?**
 Check the component code in `src/components/ui/timeline.tsx` for detailed implementation.
 
+
+

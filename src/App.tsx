@@ -1,17 +1,8 @@
-import { useState } from 'react'
 import { SplineSceneBasic } from './components/demo'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './components/ui/card'
-import { Full3DExperience } from './components/Full3DExperience'
 import { TimelineDemo } from './components/TimelineDemo'
 
 function App() {
-  const [showFull3D, setShowFull3D] = useState(false)
-
-  // 如果显示全屏 3D 体验，则渲染该组件
-  if (showFull3D) {
-    return <Full3DExperience onBack={() => setShowFull3D(false)} />
-  }
-
   return (
     <div className="min-h-screen bg-black">
       {/* 头部导航 */}
@@ -25,11 +16,8 @@ function App() {
               <a href="#about" className="text-neutral-400 hover:text-neutral-200 transition-colors font-light">
                 关于我
               </a>
-              <a href="#doing" className="text-neutral-400 hover:text-neutral-200 transition-colors font-light">
-                在做的事
-              </a>
-              <a href="#interests" className="text-neutral-400 hover:text-neutral-200 transition-colors font-light">
-                兴趣爱好
+              <a href="#values" className="text-neutral-400 hover:text-neutral-200 transition-colors font-light">
+                我的价值观
               </a>
               <a href="#timeline" className="text-neutral-400 hover:text-neutral-200 transition-colors font-light">
                 时间轴
@@ -39,200 +27,100 @@ function App() {
         </div>
       </nav>
 
+      {/* 3D 演示区域 - 占满全宽 */}
+      <section id="demo" className="w-full">
+        <SplineSceneBasic />
+      </section>
+
       {/* 主要内容区域 */}
       <main className="container mx-auto px-4 py-12">
-        {/* 英雄区域 - 个人介绍 */}
-        <section className="mb-20 text-center">
-          <h2 className="text-6xl md:text-7xl font-light mb-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
-            Hi, 我是阿豪
-          </h2>
-          <p className="text-xl text-neutral-400 max-w-3xl mx-auto mb-4 font-light leading-relaxed">
-            🧬 ENFJ ➡️ 本职是个产品，也点了运营、设计的技能树
-          </p>
-          <p className="text-xl text-neutral-400 max-w-3xl mx-auto mb-8 font-light leading-relaxed">
-            🎐 经历数据产品到AI产品，希望能「做自己认同的产品 or 内容，改善一小撮人的生活」
-          </p>
-          <div className="flex flex-wrap justify-center gap-4 text-neutral-400 text-base font-light">
-            <span>💎 最近关注：AI｜主题写作｜知识管理｜个人规划</span>
-            <span>📍 坐标：武汉</span>
-            <span>🐮 力求多讲"人话"</span>
-            <span>🙋 享受把事情完全想通、讲明白的感觉</span>
-          </div>
-          <button 
-            onClick={() => {
-              console.log('🚀 点击了"探索更多"按钮')
-              setShowFull3D(true)
-            }}
-            className="mt-12 px-8 py-3 bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded-none font-light transition-all"
-          >
-            探索 3D 空间
-          </button>
-        </section>
-
-        {/* 3D 演示区域 */}
-        <section id="demo" className="mb-20">
-          <SplineSceneBasic onClick={() => {
-            console.log('🎨 点击了 3D 卡片')
-            setShowFull3D(true)
-          }} />
-        </section>
-
         {/* 关于我区域 */}
         <section id="about" className="mb-20">
           <h3 className="text-4xl font-light text-center mb-12 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
             关于我
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          {/* 爱好 */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             <Card className="bg-black border-white/10 backdrop-blur-sm hover:border-white/20 transition-all">
               <CardHeader>
-                <CardTitle className="text-neutral-200 font-light">💼 职业路径</CardTitle>
+                <CardTitle className="text-xl font-light text-neutral-200">📷 摄影</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-neutral-400 font-light leading-relaxed">
-                  从数据产品到 AI 产品，主业是 B 端产品经理，深耕供应链行业。经历让我理解数据驱动与智能化转型的全过程。
+                  视觉中国认证摄影师；拍过5万张照片；拿过三次摄影赛奖；目前是富士粉
                 </CardDescription>
               </CardContent>
             </Card>
 
             <Card className="bg-black border-white/10 backdrop-blur-sm hover:border-white/20 transition-all">
               <CardHeader>
-                <CardTitle className="text-neutral-200 font-light">🎯 技能树</CardTitle>
+                <CardTitle className="text-xl font-light text-neutral-200">🎸 音乐</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-neutral-400 font-light leading-relaxed">
-                  产品 + 运营 + 设计的复合能力。既能把握产品全局，也能深入细节打磨体验，还能用数据和运营思维驱动增长。
+                  民谣吉他手；大学组过乐队，拿过十佳歌手；最近业余学流行钢琴
                 </CardDescription>
               </CardContent>
             </Card>
 
             <Card className="bg-black border-white/10 backdrop-blur-sm hover:border-white/20 transition-all">
               <CardHeader>
-                <CardTitle className="text-neutral-200 font-light">🌟 个人特质</CardTitle>
+                <CardTitle className="text-xl font-light text-neutral-200">💒 家乡</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-neutral-400 font-light leading-relaxed">
-                  ENFJ 性格，力求多讲"人话"，享受把复杂事情想通、讲明白的过程。相信输出是最好的输入。
+                  江西吉安
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-black border-white/10 backdrop-blur-sm hover:border-white/20 transition-all">
+              <CardHeader>
+                <CardTitle className="text-xl font-light text-neutral-200">🏰 学校</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-neutral-400 font-light leading-relaxed">
+                  武汉大学
                 </CardDescription>
               </CardContent>
             </Card>
           </div>
-        </section>
 
-        {/* 在做的事区域 */}
-        <section id="doing" className="mb-20">
+          {/* 人设标签 */}
           <Card className="bg-black border-white/10 backdrop-blur-sm">
             <CardHeader>
-              <CardTitle className="text-3xl font-light bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
-                在做的事
-              </CardTitle>
+              <CardTitle className="text-2xl font-light text-neutral-200">🚩 人设标签</CardTitle>
             </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="flex gap-3 items-start">
-                <span className="text-white text-xl">—</span>
-                <p className="text-neutral-300 text-lg font-light leading-relaxed">
-                  <strong className="text-neutral-200">跟随 AI 时代浪潮</strong>，专注探索 AI 应用，参与 AI 开源社区贡献
-                </p>
-              </div>
-              <div className="flex gap-3 items-start">
-                <span className="text-white text-xl">—</span>
-                <p className="text-neutral-300 text-lg font-light leading-relaxed">
-                  <strong className="text-neutral-200">主业是 B 端产品经理</strong>，在做供应链行业
-                </p>
-              </div>
-              <div className="flex gap-3 items-start">
-                <span className="text-white text-xl">—</span>
-                <p className="text-neutral-300 text-lg font-light leading-relaxed">
-                  <strong className="text-neutral-200">面向自己的公开写作</strong>，Build in Public，吸引同路人
-                </p>
-              </div>
-              <div className="flex gap-3 items-start">
-                <span className="text-white text-xl">—</span>
-                <p className="text-neutral-300 text-lg font-light leading-relaxed">
-                  <strong className="text-neutral-200">持续发掘自我</strong>，探寻最适合我的事情
-                </p>
+            <CardContent>
+              <div className="flex flex-wrap gap-3">
+                {[
+                  '纪实摄影',
+                  '航拍达人',
+                  '乐队吉他手',
+                  '业余乒乓球',
+                  '羽毛球',
+                  '篮球',
+                  '居家好男人'
+                ].map((tag, index) => (
+                  <span
+                    key={index}
+                    className="px-4 py-2 bg-white/5 border border-white/10 hover:border-white/20 text-neutral-300 text-sm font-light rounded-full transition-all"
+                  >
+                    {tag}
+                  </span>
+                ))}
               </div>
             </CardContent>
           </Card>
-        </section>
-
-        {/* 我的兴趣区域 */}
-        <section id="interests" className="mb-20">
-          <h3 className="text-4xl font-light text-center mb-12 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
-            我的兴趣
-          </h3>
-          
-          {/* AI 与工具 */}
-          <Card className="bg-black border-white/10 backdrop-blur-sm mb-6">
-            <CardHeader>
-              <CardTitle className="text-2xl font-light text-neutral-200">🤖 AI 与效率工具</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-3">
-              <p className="text-neutral-300 font-light leading-relaxed">
-                最近关注 AI 比较多，<strong className="text-neutral-200">AI Agent 应用、Prompt 工程</strong>都是我的关注项
-              </p>
-              <p className="text-neutral-300 font-light leading-relaxed">
-                我是个<strong className="text-neutral-200">工具控</strong>，喜欢迭代自己的知识管理、效率工具
-              </p>
-              <p className="text-neutral-400 text-sm font-light leading-relaxed">
-                广泛且深入地用过飞书、Notion、Obsidian、我来Wolai、OneNote、Bear、印象笔记等数十款工具，搭建过 PARA、LYT、常青笔记、GTD 等模式
-              </p>
-            </CardContent>
-          </Card>
-
-          {/* 生活兴趣 */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Card className="bg-black border-white/10 backdrop-blur-sm hover:border-white/20 transition-all">
-              <CardHeader>
-                <CardTitle className="text-xl font-light text-neutral-200">🚲 骑车</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-neutral-400 font-light leading-relaxed">
-                  山地转公路，目前最长骑过单日 100 公里
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-black border-white/10 backdrop-blur-sm hover:border-white/20 transition-all">
-              <CardHeader>
-                <CardTitle className="text-xl font-light text-neutral-200">🍳 烹饪</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-neutral-400 font-light leading-relaxed">
-                  研究各种烧法的不同变化，掌握辣椒炒肉的 10 种炒法
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-black border-white/10 backdrop-blur-sm hover:border-white/20 transition-all">
-              <CardHeader>
-                <CardTitle className="text-xl font-light text-neutral-200">🎮 游戏</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-neutral-400 font-light leading-relaxed">
-                  PS5、Xbox、Switch 全平台玩家，周五晚 9 点在打星际 2
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-black border-white/10 backdrop-blur-sm hover:border-white/20 transition-all">
-              <CardHeader>
-                <CardTitle className="text-xl font-light text-neutral-200">🏹 光弓</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-neutral-400 font-light leading-relaxed">
-                  只能在 10 米收黄
-                </CardDescription>
-              </CardContent>
-            </Card>
-          </div>
         </section>
 
         {/* 我的价值观区域 */}
-        <section className="mb-20">
+        <section id="values" className="mb-20">
           <h3 className="text-4xl font-light text-center mb-12 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
             我的价值观
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {[
               '做自己认同的事',
               '终身学习，永远在成长的路上',
@@ -245,9 +133,8 @@ function App() {
             ].map((value, index) => (
               <div
                 key={index}
-                className="px-6 py-4 bg-black border border-white/10 hover:border-white/20 text-neutral-300 font-light transition-all flex items-center gap-3"
+                className="px-6 py-4 bg-black border border-white/10 hover:border-white/20 text-neutral-300 font-light transition-all"
               >
-                <span className="text-white">—</span>
                 <span className="leading-relaxed">{value}</span>
               </div>
             ))}
@@ -258,6 +145,46 @@ function App() {
       {/* Timeline 演示区域 */}
       <section id="timeline" className="w-full">
         <TimelineDemo />
+      </section>
+
+      {/* 关注我区域 */}
+      <section className="w-full bg-black py-20">
+        <div className="container mx-auto px-4">
+          <h3 className="text-4xl font-light text-center mb-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+            关注我
+          </h3>
+          <p className="text-center text-neutral-400 mb-12 font-light">
+            欢迎通过以下方式与我交流
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+            {/* 小红书二维码 */}
+            <div className="flex flex-col items-center">
+              <div className="bg-white p-4 rounded-lg mb-4 border border-white/10">
+                <img
+                  src="/images/qrcode/xiaohongshu.jpg"
+                  alt="小红书二维码"
+                  className="w-48 h-48 object-contain"
+                />
+              </div>
+              <p className="text-neutral-300 text-lg font-light">扫码关注小红书</p>
+              <p className="text-neutral-500 text-sm font-light mt-1">分享产品与AI干货</p>
+            </div>
+
+            {/* 微信公众号二维码 */}
+            <div className="flex flex-col items-center">
+              <div className="bg-white p-4 rounded-lg mb-4 border border-white/10">
+                <img
+                  src="/images/qrcode/wechat.jpg"
+                  alt="微信公众号二维码"
+                  className="w-48 h-48 object-contain"
+                />
+              </div>
+              <p className="text-neutral-300 text-lg font-light">扫码关注公众号</p>
+              <p className="text-neutral-500 text-sm font-light mt-1">获取深度文章推送</p>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* 页脚 */}

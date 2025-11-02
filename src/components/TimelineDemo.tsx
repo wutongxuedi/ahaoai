@@ -1,128 +1,137 @@
-import { Timeline } from "@/components/ui/timeline";
+import { Timeline } from "./ui/timeline";
 
 export function TimelineDemo() {
   const data = [
     {
-      title: "2024-现在",
+      title: "2025",
       content: (
         <div>
-          <p className="text-neutral-300 text-xs md:text-sm font-light mb-8 leading-relaxed">
-            深度探索 AI 时代，专注 AI Agent 应用与 Prompt 工程。积极参与开源社区，Build in Public 吸引同路人。
+          <p className="text-neutral-300 text-base md:text-lg font-light mb-4 leading-relaxed">
+            <strong className="text-neutral-200">在顺丰科技转型 AI 产品经理</strong>
+          </p>
+          <p className="text-neutral-400 text-sm md:text-base font-light mb-6 leading-relaxed">
+            负责落地仓库出库 AI Agent，通过智能决策系统优化出库流程，提升仓储效率。探索 AI 在物流场景的深度应用，推动供应链智能化升级。
           </p>
           <div className="grid grid-cols-2 gap-4">
             <img
-              src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=500&h=500&fit=crop"
-              alt="AI 探索"
-              className="rounded-none object-cover h-20 md:h-44 lg:h-60 w-full border border-white/10 grayscale hover:grayscale-0 transition-all duration-500"
+              src="/images/timeline/2025-1.jpg"
+              alt="AI Agent"
+              className="rounded-lg w-full object-cover h-48 border border-white/10"
             />
             <img
-              src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=500&h=500&fit=crop"
-              alt="代码与AI"
-              className="rounded-none object-cover h-20 md:h-44 lg:h-60 w-full border border-white/10 grayscale hover:grayscale-0 transition-all duration-500"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=500&h=500&fit=crop"
-              alt="写作输出"
-              className="rounded-none object-cover h-20 md:h-44 lg:h-60 w-full border border-white/10 grayscale hover:grayscale-0 transition-all duration-500"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=500&h=500&fit=crop"
-              alt="知识管理"
-              className="rounded-none object-cover h-20 md:h-44 lg:h-60 w-full border border-white/10 grayscale hover:grayscale-0 transition-all duration-500"
+              src="/images/timeline/2025-2.jpg"
+              alt="智能仓储"
+              className="rounded-lg w-full object-cover h-48 border border-white/10"
             />
           </div>
         </div>
       ),
     },
     {
-      title: "2023",
+      title: "2024",
       content: (
         <div>
-          <p className="text-neutral-300 text-xs md:text-sm font-light mb-8 leading-relaxed">
-            从数据产品转向 AI 产品，在供应链领域深耕 B 端产品设计。持续迭代知识管理体系，探索最适合自己的工作流。
+          <p className="text-neutral-300 text-base md:text-lg font-light mb-4 leading-relaxed">
+            <strong className="text-neutral-200">在顺丰科技供应链做策略产品经理</strong>
           </p>
-          <p className="text-neutral-300 text-xs md:text-sm font-light mb-8 leading-relaxed">
-            开始面向自己的公开写作，享受把事情完全想通、讲明白的感觉。
+          <p className="text-neutral-400 text-sm md:text-base font-light mb-4 leading-relaxed">
+            主导供应链策略产品设计，通过数据驱动优化物流决策。项目获得<strong className="text-neutral-200">中物联智能供应链平台二等奖</strong>，为行业数字化转型提供了创新解决方案。
           </p>
           <div className="grid grid-cols-2 gap-4">
             <img
-              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=500&fit=crop"
+              src="/images/timeline/2024-1.jpg"
+              alt="供应链数据分析"
+              className="rounded-lg w-full object-cover h-48 border border-white/10"
+            />
+            <img
+              src="/images/timeline/2024-2.jpg"
+              alt="策略规划"
+              className="rounded-lg w-full object-cover h-48 border border-white/10"
+            />
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "2022",
+      content: (
+        <div>
+          <p className="text-neutral-300 text-base md:text-lg font-light mb-4 leading-relaxed">
+            <strong className="text-neutral-200">在小米数据中台做数据产品经理</strong>
+          </p>
+          <p className="text-neutral-400 text-sm md:text-base font-light mb-4 leading-relaxed">
+            深耕数据产品，获得<strong className="text-neutral-200">集团数据治理一等奖</strong>。主导开发数据机器人、代码补全工具等创新产品，显著提升研发效率，为公司数据化转型奠定基础。
+          </p>
+          <div className="grid grid-cols-2 gap-4">
+            <img
+              src="/images/timeline/2022-1.jpg"
               alt="数据分析"
-              className="rounded-none object-cover h-20 md:h-44 lg:h-60 w-full border border-white/10 grayscale hover:grayscale-0 transition-all duration-500"
+              className="rounded-lg w-full object-cover h-48 border border-white/10"
             />
             <img
-              src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=500&h=500&fit=crop"
-              alt="产品工作"
-              className="rounded-none object-cover h-20 md:h-44 lg:h-60 w-full border border-white/10 grayscale hover:grayscale-0 transition-all duration-500"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=500&h=500&fit=crop"
-              alt="笔记系统"
-              className="rounded-none object-cover h-20 md:h-44 lg:h-60 w-full border border-white/10 grayscale hover:grayscale-0 transition-all duration-500"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=500&fit=crop"
-              alt="技术探索"
-              className="rounded-none object-cover h-20 md:h-44 lg:h-60 w-full border border-white/10 grayscale hover:grayscale-0 transition-all duration-500"
+              src="/images/timeline/2022-2.jpg"
+              alt="数据可视化"
+              className="rounded-lg w-full object-cover h-48 border border-white/10"
             />
           </div>
         </div>
       ),
     },
     {
-      title: "成长轨迹",
+      title: "2021",
       content: (
         <div>
-          <p className="text-neutral-300 text-xs md:text-sm font-light mb-4 leading-relaxed">
-            终身学习，永远在成长的路上。从工具控到输出者，从独自探索到 Build in Public。
+          <p className="text-neutral-300 text-base md:text-lg font-light mb-4 leading-relaxed">
+            <strong className="text-neutral-200">在小米小爱同学做 AI 产品经理</strong>
           </p>
-          <div className="mb-8 space-y-3">
-            <div className="flex gap-3 items-center text-neutral-400 text-xs md:text-sm font-light">
-              <span className="text-white">—</span> 掌握多款知识管理工具（Notion、Obsidian、飞书等）
-            </div>
-            <div className="flex gap-3 items-center text-neutral-400 text-xs md:text-sm font-light">
-              <span className="text-white">—</span> 搭建 PARA、LYT、常青笔记、GTD 等知识体系
-            </div>
-            <div className="flex gap-3 items-center text-neutral-400 text-xs md:text-sm font-light">
-              <span className="text-white">—</span> 骑行单日最长 100 公里
-            </div>
-            <div className="flex gap-3 items-center text-neutral-400 text-xs md:text-sm font-light">
-              <span className="text-white">—</span> PS5、Xbox、Switch 全平台游戏玩家
-            </div>
-            <div className="flex gap-3 items-center text-neutral-400 text-xs md:text-sm font-light">
-              <span className="text-white">—</span> 辣椒炒肉的 10 种炒法研究者
-            </div>
-          </div>
+          <p className="text-neutral-400 text-sm md:text-base font-light mb-6 leading-relaxed">
+            系统学习并实践 AI 产品全流程方法论，从需求分析、模型训练到产品落地。深入理解语音交互、自然语言处理等核心技术，为后续 AI 产品工作打下扎实基础。
+          </p>
           <div className="grid grid-cols-2 gap-4">
             <img
-              src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=500&h=500&fit=crop"
-              alt="骑行"
-              className="rounded-none object-cover h-20 md:h-44 lg:h-60 w-full border border-white/10 grayscale hover:grayscale-0 transition-all duration-500"
+              src="/images/timeline/2021-1.jpg"
+              alt="AI语音助手"
+              className="rounded-lg w-full object-cover h-48 border border-white/10"
             />
             <img
-              src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=500&h=500&fit=crop"
-              alt="烹饪"
-              className="rounded-none object-cover h-20 md:h-44 lg:h-60 w-full border border-white/10 grayscale hover:grayscale-0 transition-all duration-500"
+              src="/images/timeline/2021-2.jpg"
+              alt="智能交互"
+              className="rounded-lg w-full object-cover h-48 border border-white/10"
+            />
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "2020",
+      content: (
+        <div>
+          <p className="text-neutral-300 text-base md:text-lg font-light mb-4 leading-relaxed">
+            <strong className="text-neutral-200">在腾讯短视频产品部做产品运营</strong>
+          </p>
+          <p className="text-neutral-400 text-sm md:text-base font-light mb-6 leading-relaxed">
+            职业生涯的起点，在腾讯这个大平台培养了最初的产品感。从用户运营到数据分析，从内容策划到增长优化，全方位锻炼产品思维，为转型产品经理奠定基础。
+          </p>
+          <div className="grid grid-cols-2 gap-4">
+            <img
+              src="/images/timeline/2020-1.jpg"
+              alt="短视频制作"
+              className="rounded-lg w-full object-cover h-48 border border-white/10"
             />
             <img
-              src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=500&h=500&fit=crop"
-              alt="游戏"
-              className="rounded-none object-cover h-20 md:h-44 lg:h-60 w-full border border-white/10 grayscale hover:grayscale-0 transition-all duration-500"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=500&h=500&fit=crop"
-              alt="武汉"
-              className="rounded-none object-cover h-20 md:h-44 lg:h-60 w-full border border-white/10 grayscale hover:grayscale-0 transition-all duration-500"
+              src="/images/timeline/2020-2.jpg"
+              alt="内容运营"
+              className="rounded-lg w-full object-cover h-48 border border-white/10"
             />
           </div>
         </div>
       ),
     },
   ];
-  
   return (
     <div className="w-full">
       <Timeline data={data} />
     </div>
   );
 }
+

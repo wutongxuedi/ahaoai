@@ -79,3 +79,13 @@
   }
 }
 
+/* 强制移除3D区域的边框 */
+#demo,
+#demo > *,
+#demo * {
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
